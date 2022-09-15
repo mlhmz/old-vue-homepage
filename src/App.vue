@@ -1,5 +1,6 @@
 <script setup>
   import Navbar from './components/Navbar.vue'
+  import Footer from './components/Footer.vue'
   import { LoremIpsum } from 'lorem-ipsum';
   import { withModifiers } from 'vue';
 
@@ -18,13 +19,14 @@
 </script>
 
 <template>
-  <Navbar></Navbar>
+  <Navbar/>
   <h1 class="text-5xl text-center m-5 font-bold">Hi, i'm Malek! 👋🏻</h1>
   <div v-if="mockMode">
     <p class="w-1/2 text-center m-auto my-1">{{lorem.generateSentences(20)}}</p>
     <p class="w-1/2 text-center m-auto my-1">{{lorem.generateSentences(20)}}</p>
     <p class="w-1/2 text-center m-auto my-1">{{lorem.generateSentences(20)}}</p>
   </div>
+  <Footer/>
   
 </template>
 
