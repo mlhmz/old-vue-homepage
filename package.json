@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "lorem-ipsum": "^2.0.8",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "vue-i18n": "^8.27.2",
+    "vue-typical": "^2.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",

@@ -8,8 +8,11 @@ module.exports = {
     extend: {
       colors: {
         'primary': "rgb(45 212 191)",
-        'secondary': "#32303b"
+        'secondary': "#111827"
       },
+      boxShadow: {
+        'button-backglow': '0 0px 20px'
+      }
     },
   },
   plugins: [],
