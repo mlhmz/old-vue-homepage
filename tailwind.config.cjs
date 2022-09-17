@@ -12,7 +12,10 @@ module.exports = {
       },
       boxShadow: {
         'button-backglow': '0 0px 20px'
-      }
+      },
+      fontFamily: {
+        'mono': ['Roboto Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace']
+      } 
     },
   },
   plugins: [],

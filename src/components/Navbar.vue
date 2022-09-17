@@ -12,8 +12,8 @@ const nav = reactive({
 
 <template>
     <nav class="fixed">
-        <div class="flex flex-wrap justify-between items-center mx-auto w-screen p-3 bg-slate-900 bg-opacity-50 border-b border-slate-800 backdrop-blur-lg">
-            <RouterLink to="/" class="font-bold text-xl flex self-center">🧑‍💻 <span class="text-white">Malek Hamza</span></RouterLink>
+        <div class="flex flex-wrap justify-between items-center mx-auto w-screen py-4 md:p-3 bg-slate-900 bg-opacity-50 border-b border-slate-800 backdrop-blur-lg">
+            <RouterLink to="/" class="font-bold text-xl flex self-center ml-1">🧑‍💻 <span class="text-white">Malek Hamza</span></RouterLink>
             <div class="block md:hidden">
                 <button class="flex items-center px-3 py-2 mx-7 border rounded text-teal-200 border-primary hover:text-secondary hover:bg-primary hover:shadow-teal-800"
                 v-on:click="toggleNav()">
@@ -22,17 +22,17 @@ const nav = reactive({
             </div>
             <div v-show="this.nav.toggled" class="block md:hidden" id="mobile-nav">
                 <ul>
-                    <li class="p-2 mx-5 w-screen">
-                        <RouterLink to="/about" class="transition ease-in-out delay-50 font-bold hover:text-primary">About me</RouterLink>
+                    <li class="w-screen my-4">
+                        <RouterLink to="/about" id="mobile-nav" class="transition ease-in-out delay-50 font-bold hover:text-primary m-1 p-2 rounded-md block">About me</RouterLink>
                     </li>
-                    <li class="p-2 mx-5 w-screen">
-                        <RouterLink to="/projects" class="transition ease-in-out delay-50 font-bold hover:text-primary">Projects</RouterLink>
+                    <li class="w-screen my-4">
+                        <RouterLink to="/projects" id="mobile-nav" class="transition ease-in-out delay-50 font-bold hover:text-primary m-1 p-2 rounded-md block">Projects</RouterLink>
                     </li>
-                    <li class="p-2 mx-5 w-screen">
-                        <RouterLink to="/links" class="transition ease-in-out delay-50 font-bold hover:text-primary">Links</RouterLink>
+                    <li class="w-screen my-4">
+                        <RouterLink to="/links" id="mobile-nav" class="transition ease-in-out delay-50 font-bold hover:text-primary m-1 p-2 rounded-md block">Links</RouterLink>
                     </li>
-                    <li class="p-2 mx-5 w-screen">
-                        <RouterLink to="/server" class="transition ease-in-out delay-50 font-bold hover:text-primary">Server</RouterLink>
+                    <li class="w-screen my-4">
+                        <RouterLink to="/server" id="mobile-nav" class="transition ease-in-out delay-50 font-bold hover:text-primary m-1 p-2 rounded-md block">Server</RouterLink>
                     </li>
                 </ul>
             </div>
@@ -58,9 +58,18 @@ const nav = reactive({
     <div class="container h-20 w-screen"></div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+    $primary: rgb(45 212 191);
+    $secondary: #111827;
     .active {
-        color: rgb(45 212 191);
+        color: $primary;
+    }
+
+    #mobile-nav {
+            .active {
+                color: $secondary;
+                background: $primary;
+            }
     }
 </style>
     
