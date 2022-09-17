@@ -6,14 +6,14 @@ import VTypical from 'vue-typical'
     <div class="home">
         <div class="h-screen flex place-items-center">
             <div class="w-screen h-1/2 m-auto">
-            <VTypical 
-                class="blink text-5xl m-5 font-bold font-mono text-center"
+                <VTypical 
+                class="blink text-3xl md:text-5xl m-5 font-bold font-mono text-center"
                 :steps="['Hi I\'m Malek! 👋🏻']"
                 :wrapper="'h2'"
                 ></VTypical>
                 <div class="container text-center m-auto">
                     <p>Welcome to my Homepage!</p>
-                    <div class="flex justify-between h-10 w-2/12 my-5 m-auto">
+                    <div class="flex justify-between h-10 w-4/12 my-5 m-auto" id="desktop-menu">
                         <a href="https://github.com/mlhmz"><FontAwesomeIcon icon="fa-brands fa-github" /></a>
                         <a href="https://instagram.com/ml.hmz_"><FontAwesomeIcon icon="fa-brands fa-instagram" /></a>
                         <a href="https://https://twitter.com/ml_hmz"><FontAwesomeIcon icon="fa-brands fa-twitter" /></a>
