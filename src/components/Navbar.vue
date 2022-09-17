@@ -4,14 +4,14 @@
 <template>
     <nav class="fixed">
         <div class="flex flex-wrap justify-between items-center mx-auto w-screen p-3 bg-slate-900 bg-opacity-80 border-b border-slate-800 backdrop-blur-lg">
-            <RouterLink to="/" class="font-bold text-xl flex self-center">🧑‍💻 Malek Hamza</RouterLink>
+            <RouterLink to="/" class="font-bold text-xl flex self-center">🧑‍💻 <span class="text-white">Malek Hamza</span></RouterLink>
             <div class="w-full md:block md:w-auto">
                 <ul class="flex md:flex-row">
                     <li class="mx-5">
                         <RouterLink to="/about" class="transition ease-in-out delay-50 font-bold hover:text-primary">About me</RouterLink>
                     </li>
                     <li class="mx-5">
-                        <RouterLink to="/blog" class="transition ease-in-out delay-50 font-bold hover:text-primary">Blog</RouterLink>
+                        <RouterLink to="/projects" class="transition ease-in-out delay-50 font-bold hover:text-primary">Projects</RouterLink>
                     </li>
                     <li class="mx-5">
                         <RouterLink to="/links" class="transition ease-in-out delay-50 font-bold hover:text-primary">Links</RouterLink>

@@ -4,7 +4,7 @@ import './style.css'
 import App from './App.vue'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
-import Blog from './views/Blog.vue'
+import Projects from './views/Projects.vue'
 import Links from './views/Links.vue'
 import Server from './views/Server.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -17,7 +17,7 @@ const router = createRouter({
     routes: [
         {path: '/', name: 'Home', component: Home},
         {path: '/about', name: 'About', component: About},
-        {path: '/blog', name: 'Blog', component: Blog},
+        {path: '/projects', name: 'Projects', component: Projects},
         {path: '/links', name: 'Links', component: Links},
         {path: '/server', name: 'Server', component: Server}
     ],

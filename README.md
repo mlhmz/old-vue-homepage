@@ -11,6 +11,6 @@ The plan of the website is, to implement little services as widgets.
 [] Links Website like Linktree
 [] No Header query
 [] Profile Picture service
-[] Blog service
+[] Projects service
 [] Server status & metrics service
 
