@@ -28,13 +28,15 @@ import VTypical from 'vue-typical'
 
 <style scoped>
     .blink::after {
-      content: '|';
-      animation: blink 1s infinite step-start;
+        position: relative;
+        content: '|';
+        animation: blink 2s infinite ease-in-out;
+        z-index: -100;
     }
-    
+
     @keyframes blink {
-      50% {
-        opacity: 0;
-      }
+        50% {
+            opacity: 0;
+        }
     }
-    </style>
+</style>
