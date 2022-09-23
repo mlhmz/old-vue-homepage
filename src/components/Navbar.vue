@@ -52,7 +52,7 @@ const nav = reactive({
                     </li>
                 </ul>
             </div>
-            <button class="transition ease-in-out delay-50 bg-teal-400 text-secondary font-bold py-1 px-4 mx-7 rounded-full shadow-button-backglow hidden md:block">Contact</button>
+            <button class="transition ease-in-out delay-50 bg-teal-400 text-secondary font-bold py-1 px-4 mx-7 rounded-full shadow-button-backglow hover:shadow-primary hidden md:block">Contact</button>
         </div>
     </nav>
     <div class="container h-20 w-screen"></div>
