@@ -1,7 +1,20 @@
 <script setup>
 import VTypical from 'vue-typical'
 
-const views = localStorage.getItem(new Date().toDateString() + " Views")
+function getViews() {
+    var localStorageViews = parseInt(localStorage.getItem(new Date().toDateString() + " Views"));
+
+    switch (localStorageViews) {
+        case 1:
+            return "1st"
+        case 2:
+            return "2nd"
+        case 3:
+            return "3rd"
+        default:
+            return localStorageViews + "th"
+    }
+}
 </script>
 
 <template>
@@ -15,7 +28,7 @@ const views = localStorage.getItem(new Date().toDateString() + " Views")
                 ></VTypical>
                 <div class="container text-center m-auto">
                     <p>Welcome to my Homepage!</p>
-                    <p>This is your {{views}}. view today</p>
+                    <p>This is your {{getViews()}} view today</p>
                     <div class="flex justify-between h-10 w-4/12 my-5 m-auto" id="desktop-menu">
                         <a href="https://github.com/mlhmz"><FontAwesomeIcon icon="fa-brands fa-github" /></a>
                         <a href="https://instagram.com/ml.hmz_"><FontAwesomeIcon icon="fa-brands fa-instagram" /></a>
