@@ -22,7 +22,7 @@
 <template>
     <div id="about" class="w-1/2 m-auto">
         <h1 class="text-center text-2xl font-bold">About me</h1>
-        <div id="profile-picture" class="bg-white w-40 h-40 rounded-md m-auto my-10" />
+        <div id="profile-picture" class="bg-white w-40 h-40 rounded-xl m-auto my-10" />
         <div id="text-content" class="text-center my-5">
             <div id="introduction">
                 <p>I am a {{age}} year old software developer (in education) from germany.</p>
@@ -33,7 +33,7 @@
                 <br/>
                 <button :class="{ active: !personalTraits.activated }" v-on:click="switchToHobbies">my hobbies</button>
                 <VTypical 
-                class="h-10 m-auto my-5 blink text-xl md:text-4xl font-bold font-mono text-center block"
+                class="h-10 m-auto my-5 blink text-2xl md:text-4xl font-bold font-mono text-center block"
                 v-if="personalTraits.activated"
                 :steps="['tech geek 💻', 1000, 'goal-oriented 🎯', 1000, 'team-oriented 🤝🏻', 10000]"
                 :wrapper="'div'"
@@ -42,7 +42,7 @@
                 <VTypical 
                 class="h-10 m-auto my-5 blink text-xl md:text-4xl font-bold font-mono text-center block"
                 v-else
-                :steps="['photography 📷', 1000, 'guitar 🎸', 1000, 'programming ⌨', 10000]"
+                :steps="['photography 📷', 1000, 'guitar 🎸', 1000, 'programming 💻', 10000]"
                 :wrapper="'div'"
                 :loop="Infinity"
                 ></VTypical>
