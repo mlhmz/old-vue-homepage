@@ -22,16 +22,17 @@
 <template>
     <div id="about" class="w-1/2 m-auto">
         <h1 class="text-center text-2xl font-bold">About me</h1>
-        <div id="profile-picture" class="bg-white w-40 h-40 rounded-xl m-auto my-10" />
+        <img class="bg-white w-40 h-40 rounded-xl m-auto my-10 object-cover" src="pfp.jpg"/>
+        <div id="profile-picture" class="" />
         <div id="text-content" class="text-center my-5">
             <div id="introduction">
                 <p>I am a {{age}} year old software developer (in education) from germany.</p>
             </div>
             <br/>
             <div id="information-selection">
-                <button :class="{ active: personalTraits.activated }" v-on:click="switchToPersonalTraits">my personal traits</button>
+                <button :class="{ 'text-primary': personalTraits.activated }" v-on:click="switchToPersonalTraits">my personal traits</button>
                 <br/>
-                <button :class="{ active: !personalTraits.activated }" v-on:click="switchToHobbies">my hobbies</button>
+                <button :class="{ 'text-primary': !personalTraits.activated }" v-on:click="switchToHobbies">my hobbies</button>
                 <VTypical 
                 class="h-10 m-auto my-5 blink text-2xl md:text-4xl font-bold font-mono text-center block"
                 v-if="personalTraits.activated"
@@ -55,15 +56,15 @@
                 <br/>
                 <p>I am mainly a java developer and am oriented towards full-stack workflows and, privately, <br/>
                     I am testing new technologies to automate boring tasks that I face. 
-                    most of my private projects, if they are public, can be found on github.</p>
+                    most of my private projects, if they are public, can be found on github.
+                </p>
+                <br/>
+                <p>my personal goal is to gather as much experience as I can, <br/>I am always happy to accept and implement criticism.</p>
+                <br/>
+                <p>You can find me on my social medias on the main page or contact me per email 
+                    <a class="text-primary" href="mailto:malek.hamza@tuta.io">malek.hamza@tuta.io</a></p>
             </div>
         </div>
         
     </div>
 </template>
-
-<style scoped>
-    .active {
-        color: rgb(45 212 191);
-    }
-</style>
