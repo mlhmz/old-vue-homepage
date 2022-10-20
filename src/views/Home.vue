@@ -1,26 +1,7 @@
 <script setup>
 import VTypical from 'vue-typical'
 
-var viewCount = "1";
-const viewLSKey = new Date().toDateString() + " Views"
-
-function increaseLSViewCount() {
-    console.log(localStorage.getItem(viewLSKey))
-    if (localStorage.getItem(viewLSKey) == null) {
-        localStorage.setItem(viewLSKey, "1")
-    } else {
-        localStorage.setItem(viewLSKey, parseInt(localStorage.getItem(viewLSKey)) + 1)
-    }
-}
-
-function getViewCountFromLSAndIncrease() {
-    increaseLSViewCount()
-    viewCount = localStorage.getItem(viewLSKey)
-}
-
-getViewCountFromLSAndIncrease();
-
-
+const views = localStorage.getItem(new Date().toDateString() + " Views")
 </script>
 
 <template>
@@ -34,7 +15,7 @@ getViewCountFromLSAndIncrease();
                 ></VTypical>
                 <div class="container text-center m-auto">
                     <p>Welcome to my Homepage!</p>
-                    <p>This is your {{viewCount}}. view today</p>
+                    <p>This is your {{views}}. view today</p>
                     <div class="flex justify-between h-10 w-4/12 my-5 m-auto" id="desktop-menu">
                         <a href="https://github.com/mlhmz"><FontAwesomeIcon icon="fa-brands fa-github" /></a>
                         <a href="https://instagram.com/ml.hmz_"><FontAwesomeIcon icon="fa-brands fa-instagram" /></a>
