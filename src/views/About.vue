@@ -60,8 +60,6 @@
                 <br/>
                 <p>my personal goal is to gather as much experience as I can, <br/>I am always happy to accept and implement criticism.</p>
                 <br/>
-                <p>You can find me on my social medias on the main page or contact me per email 
-                    <a class="text-primary" href="mailto:malek.hamza@tuta.io">malek.hamza@tuta.io</a></p>
             </div>
         </div>
         
