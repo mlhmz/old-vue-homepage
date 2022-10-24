@@ -1,4 +1,5 @@
 <script setup>
+import Contact from "./components/Contact.vue";
 const viewLSKey = new Date().toDateString() + " Views"
 
 function increaseLSViewCount() {
@@ -19,6 +20,7 @@ getViewCountFromLSAndIncrease();
 
 <template>
   <Navbar/>
+  <Contact/>
   <RouterView />
   <Footer/>
 </template>

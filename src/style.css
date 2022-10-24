@@ -4,6 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .primary-button {
+    @apply transition ease-in-out delay-75 bg-teal-400 text-secondary font-bold py-1 px-4 mx-7 rounded-full shadow-button-backglow hover:shadow-primary hidden md:block
+  }
+
+  .primary-input {
+    @apply my-2 bg-transparent rounded-xl border-solid border-primary border-2 p-2 focus:outline-none
+  }
+}
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -19,3 +29,5 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+
