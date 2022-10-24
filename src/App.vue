@@ -1,8 +1,4 @@
 <script setup>
-import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
-
-
 const viewLSKey = new Date().toDateString() + " Views"
 
 function increaseLSViewCount() {

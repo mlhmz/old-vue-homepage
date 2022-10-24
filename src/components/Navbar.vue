@@ -20,7 +20,7 @@ const nav = reactive({
                     <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
                 </button>
             </div>
-            <div v-show="this.nav.toggled" class="block md:hidden" id="mobile-nav">
+            <div v-show="nav.toggled" class="block md:hidden" id="mobile-nav">
                 <ul>
                     <li class="w-screen my-4">
                         <RouterLink to="/about" id="mobile-nav" class="transition ease-in-out delay-50 font-bold hover:text-primary m-1 p-2 rounded-md block">About me</RouterLink>
