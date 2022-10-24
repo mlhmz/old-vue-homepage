@@ -6,10 +6,7 @@ This is this repo of my own personal website.
 The plan of the website is, to implement little services as widgets.
 
 ## Checklist
-[ ] CI/CD Operations & Auto-Deployment  
-[ ] About me Site  
-[ ] Links Website like Linktree  
-[ ] No Header query  
+[X] About me Site    
 [ ] Profile Picture service  
 [ ] Projects service  
 [ ] Server status & metrics service  
