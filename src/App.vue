@@ -1,6 +1,15 @@
 <script setup>
-import Contact from "./components/Contact.vue";
+import { reactive } from "vue";
+
 const viewLSKey = new Date().toDateString() + " Views"
+
+const contact = reactive({
+    open: false
+})
+
+function toggleContact() {
+    contact.open = !contact.open;
+}
 
 function increaseLSViewCount() {
     if (localStorage.getItem(viewLSKey) == null) {
@@ -19,8 +28,8 @@ getViewCountFromLSAndIncrease();
 </script>
 
 <template>
-  <Navbar/>
-  <Contact/>
+  <Navbar @toggle-contact="toggleContact" />
+  <Contact  @toggle-contact="toggleContact" :contact-open=contact.open />
   <RouterView />
   <Footer/>
 </template>

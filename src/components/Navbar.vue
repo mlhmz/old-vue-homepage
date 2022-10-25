@@ -1,6 +1,8 @@
 <script setup>
 import { reactive } from '@vue/reactivity';
 
+const emits = defineEmits(['toggle-contact'])
+
 function toggleNav() {
     nav.toggled = !nav.toggled
 }
@@ -34,6 +36,9 @@ const nav = reactive({
                     <li class="w-screen my-4">
                         <RouterLink to="/server" id="mobile-nav" class="transition ease-in-out delay-50 font-bold hover:text-primary m-1 p-2 rounded-md block">Server</RouterLink>
                     </li>
+                    <div id="btn-container" class="grid place-items-end">
+                        <button class="primary-button" @click="$emit('toggle-contact')">Contact</button>
+                    </div>
                 </ul>
             </div>
             <div id="desktop-nav" class="md:w-auto hidden md:block">
@@ -52,7 +57,7 @@ const nav = reactive({
                     </li>
                 </ul>
             </div>
-            <button class="primary-button">Contact</button>
+            <button class="primary-button hidden md:block" @click="$emit('toggle-contact')">Contact</button>
         </div>
     </nav>
     <div class="container h-20 w-screen"></div>
