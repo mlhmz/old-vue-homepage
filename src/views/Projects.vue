@@ -1,17 +1,30 @@
 <script setup>
-import PocketBase from 'pocketbase';
+import { inject, ref } from 'vue';
 
-const pb = new PocketBase('http://127.0.0.1:8090');
+const $pb = inject('pb')
 
-const projects = await pb.collection('homepage_projects').getFullList();
+const projects = ref([])
 
-for (project in projects) {
-    console.log(project.id)
+const getProjects = async () => {
+    const result = await $pb.collection('homepage_projects').getFullList();
+    if (result) {
+        projects.value = result
+    }
 }
+
+
+function getScreenshotUrl(project) {
+    return $pb.getFileUrl(project, project.screenshot, {'thumb': '800x600'})
+}
+getProjects()
+
 </script>
 
 <template>
     <div class="projects">
-        <h1 class="text-center">Coming soon</h1>
+        <h1 class="text-center font-bold">Projects</h1>
+        <div v-for="project in projects">
+            <ProjectCard :project="project" :projectScreenshotUrl="getScreenshotUrl(project)" />
+        </div>
     </div>
 </template>
