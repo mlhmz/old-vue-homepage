@@ -21,10 +21,15 @@ getProjects()
 </script>
 
 <template>
-    <div class="projects">
+    <div id="projects" class="">
         <h1 class="text-center font-bold">Projects</h1>
-        <div v-for="project in projects">
-            <ProjectCard :project="project" :projectScreenshotUrl="getScreenshotUrl(project)" />
+        <div id="projects-container" class="w-1/2 m-auto flex flex-wrap justify-center">
+            <ProjectCard 
+            v-for="project in projects" 
+            :project="project" 
+            :projectScreenshotUrl="getScreenshotUrl(project)" 
+            class="w-1/3"
+            />
         </div>
     </div>
 </template>
