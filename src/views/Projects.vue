@@ -22,7 +22,7 @@ getProjects()
 
 <template>
     <div id="projects" class="">
-        <h1 class="text-center font-bold">Projects</h1>
+        <h1 class="text-center text-2xl font-bold">Projects</h1>
         <div id="projects-container" class="w-1/2 m-auto flex flex-wrap justify-center">
             <ProjectCard 
             v-for="project in projects" 
