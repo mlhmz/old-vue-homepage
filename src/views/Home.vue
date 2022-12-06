@@ -32,7 +32,7 @@ function getViews() {
                     <div class="flex justify-between h-10 w-4/12 my-5 m-auto" id="desktop-menu">
                         <a href="https://github.com/mlhmz"><FontAwesomeIcon icon="fa-brands fa-github" /></a>
                         <a href="https://instagram.com/ml.hmz_"><FontAwesomeIcon icon="fa-brands fa-instagram" /></a>
-                        <a href="https://https://twitter.com/ml_hmz"><FontAwesomeIcon icon="fa-brands fa-twitter" /></a>
+                        <a href="https://twitter.com/ml_hmz"><FontAwesomeIcon icon="fa-brands fa-twitter" /></a>
                         <a href="https://www.linkedin.com/in/malek-hamza-98254a248/"><FontAwesomeIcon icon="fa-brands fa-linkedin" /></a>
                         <a href="https://www.xing.com/profile/Malek_Hamza"><FontAwesomeIcon icon="fa-brands fa-xing" /></a>
                     </div>
