@@ -12,10 +12,10 @@ const getProjects = async () => {
     }
 }
 
-
-function getScreenshotUrl(project) {
+const getScreenshotUrl = (project) => {
     return $pb.getFileUrl(project, project.screenshot, {'thumb': '800x600'})
 }
+
 getProjects()
 
 </script>

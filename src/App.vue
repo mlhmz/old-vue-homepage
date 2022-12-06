@@ -7,11 +7,11 @@ const contact = reactive({
     open: false
 })
 
-function toggleContact() {
+const toggleContact = () => {
     contact.open = !contact.open;
 }
 
-function increaseLSViewCount() {
+const increaseLSViewCount = () => {
     if (localStorage.getItem(viewLSKey) == null) {
         localStorage.setItem(viewLSKey, "1")
     } else {
@@ -19,7 +19,7 @@ function increaseLSViewCount() {
     }
 }
 
-function getViewCountFromLSAndIncrease() {
+const getViewCountFromLSAndIncrease = () => {
     increaseLSViewCount()
     localStorage.getItem(viewLSKey)
 }
