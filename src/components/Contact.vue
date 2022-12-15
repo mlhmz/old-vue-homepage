@@ -14,10 +14,10 @@ const props = defineProps({
         <h1 class="text-xl font-bold m-5">Contact</h1>
         <form class="m-auto">
             <h2 class="font-semibold">Form - coming soon</h2>
-            <input class="primary-input w-full cursor-not-allowed" disabled placeholder="Name"/>
-            <input class="primary-input w-full cursor-not-allowed" disabled placeholder="Email"/>
-            <textarea class="my-2 bg-transparent rounded-xl border-solid border-primary border-2 p-2 resize-none focus:outline-none w-full cursor-not-allowed" disabled placeholder="Message"/>
-            <button class="primary-button m-auto cursor-not-allowed" disabled>Send</button>
+            <input class="primary-input w-full" placeholder="Name"/>
+            <input class="primary-input w-full" placeholder="Email"/>
+            <textarea class="my-2 bg-transparent rounded-xl border-solid border-primary border-2 p-2 resize-none focus:outline-none w-full" placeholder="Message"/>
+            <button class="primary-button m-auto">Send</button>
         </form>
         <h2 class="font-semibold my-3">Other contact options</h2>
         <ul>
