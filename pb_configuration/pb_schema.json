@@ -1,170 +1,166 @@
 [
-    {
-        "id": "kt5bkhoea3k0owv",
-        "name": "homepage_projects",
-        "type": "base",
+  {
+    "id": "kt5bkhoea3k0owv",
+    "name": "homepage_projects",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "id": "hortisva",
+        "name": "title",
+        "type": "text",
         "system": false,
-        "schema": [
-            {
-                "id": "hortisva",
-                "name": "title",
-                "type": "text",
-                "system": false,
-                "required": true,
-                "unique": false,
-                "options": {
-                    "min": null,
-                    "max": null,
-                    "pattern": ""
-                }
-            },
-            {
-                "id": "bm88vm3g",
-                "name": "description",
-                "type": "text",
-                "system": false,
-                "required": false,
-                "unique": false,
-                "options": {
-                    "min": null,
-                    "max": null,
-                    "pattern": ""
-                }
-            },
-            {
-                "id": "xfwdcnqe",
-                "name": "repo_url",
-                "type": "url",
-                "system": false,
-                "required": false,
-                "unique": false,
-                "options": {
-                    "exceptDomains": [],
-                    "onlyDomains": [
-                        "github.com"
-                    ]
-                }
-            },
-            {
-                "id": "gk5ji6lz",
-                "name": "screenshot",
-                "type": "file",
-                "system": false,
-                "required": true,
-                "unique": false,
-                "options": {
-                    "maxSelect": 1,
-                    "maxSize": 25000000,
-                    "mimeTypes": [
-                        "image/jpg",
-                        "image/jpeg",
-                        "image/png",
-                        "image/svg+xml",
-                        "image/gif"
-                    ],
-                    "thumbs": [
-                        "800x600"
-                    ]
-                }
-            },
-            {
-                "id": "pbdsnavh",
-                "name": "tags",
-                "type": "relation",
-                "system": false,
-                "required": false,
-                "unique": false,
-                "options": {
-                    "maxSelect": null,
-                    "collectionId": "bjja5iuvei1gara",
-                    "cascadeDelete": false
-                }
-            }
-        ],
-        "listRule": "",
-        "viewRule": "",
-        "createRule": null,
-        "updateRule": null,
-        "deleteRule": null,
-        "options": {}
-    },
-    {
-        "id": "hwrt4keq4fs647q",
-        "name": "homepage_messages",
-        "type": "base",
+        "required": true,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": null,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "bm88vm3g",
+        "name": "description",
+        "type": "text",
         "system": false,
-        "schema": [
-            {
-                "id": "7kh6cpez",
-                "name": "name",
-                "type": "text",
-                "system": false,
-                "required": true,
-                "unique": false,
-                "options": {
-                    "min": null,
-                    "max": null,
-                    "pattern": ""
-                }
-            },
-            {
-                "id": "4d3rdcpx",
-                "name": "content",
-                "type": "text",
-                "system": false,
-                "required": true,
-                "unique": false,
-                "options": {
-                    "min": null,
-                    "max": null,
-                    "pattern": ""
-                }
-            },
-            {
-                "id": "2d4wki4t",
-                "name": "email",
-                "type": "email",
-                "system": false,
-                "required": true,
-                "unique": false,
-                "options": {
-                    "exceptDomains": null,
-                    "onlyDomains": null
-                }
-            }
-        ],
-        "listRule": null,
-        "viewRule": null,
-        "createRule": "",
-        "updateRule": null,
-        "deleteRule": null,
-        "options": {}
-    },
-    {
-        "id": "bjja5iuvei1gara",
-        "name": "homepage_projects_tags",
-        "type": "base",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": null,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "xfwdcnqe",
+        "name": "repo_url",
+        "type": "url",
         "system": false,
-        "schema": [
-            {
-                "id": "bogdwehd",
-                "name": "tag_name",
-                "type": "text",
-                "system": false,
-                "required": true,
-                "unique": false,
-                "options": {
-                    "min": null,
-                    "max": null,
-                    "pattern": ""
-                }
-            }
-        ],
-        "listRule": null,
-        "viewRule": null,
-        "createRule": null,
-        "updateRule": null,
-        "deleteRule": null,
-        "options": {}
-    }
+        "required": false,
+        "unique": false,
+        "options": {
+          "exceptDomains": [],
+          "onlyDomains": ["github.com"]
+        }
+      },
+      {
+        "id": "gk5ji6lz",
+        "name": "screenshot",
+        "type": "file",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 25000000,
+          "mimeTypes": [
+            "image/jpg",
+            "image/jpeg",
+            "image/png",
+            "image/svg+xml",
+            "image/gif"
+          ],
+          "thumbs": ["800x600"]
+        }
+      },
+      {
+        "id": "pbdsnavh",
+        "name": "tags",
+        "type": "relation",
+        "system": false,
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSelect": null,
+          "collectionId": "bjja5iuvei1gara",
+          "cascadeDelete": false
+        }
+      }
+    ],
+    "listRule": "",
+    "viewRule": "",
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "options": {}
+  },
+  {
+    "id": "hwrt4keq4fs647q",
+    "name": "homepage_messages",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "id": "7kh6cpez",
+        "name": "name",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": null,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "4d3rdcpx",
+        "name": "content",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": null,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "2d4wki4t",
+        "name": "email",
+        "type": "email",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "exceptDomains": null,
+          "onlyDomains": null
+        }
+      }
+    ],
+    "listRule": null,
+    "viewRule": null,
+    "createRule": "",
+    "updateRule": null,
+    "deleteRule": null,
+    "options": {}
+  },
+  {
+    "id": "bjja5iuvei1gara",
+    "name": "homepage_projects_tags",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "id": "bogdwehd",
+        "name": "tag_name",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": null,
+          "pattern": ""
+        }
+      }
+    ],
+    "listRule": null,
+    "viewRule": null,
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "options": {}
+  }
 ]

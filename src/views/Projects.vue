@@ -1,35 +1,37 @@
 <script setup>
-import { inject, ref } from 'vue';
+import { inject, ref } from "vue";
 
-const $pb = inject('pb')
+const $pb = inject("pb");
 
-const projects = ref([])
+const projects = ref([]);
 
 const getProjects = async () => {
-    const result = await $pb.collection('homepage_projects').getFullList();
-    if (result) {
-        projects.value = result
-    }
-}
+  const result = await $pb.collection("homepage_projects").getFullList();
+  if (result) {
+    projects.value = result;
+  }
+};
 
 const getScreenshotUrl = (project) => {
-    return $pb.getFileUrl(project, project.screenshot, {'thumb': '800x600'})
-}
+  return $pb.getFileUrl(project, project.screenshot, { thumb: "800x600" });
+};
 
-getProjects()
-
+getProjects();
 </script>
 
 <template>
-    <div id="projects" class="">
-        <h1 class="text-center text-2xl font-bold">Projects</h1>
-        <div id="projects-container" class="w-1/2 m-auto flex flex-wrap justify-center">
-            <ProjectCard 
-            v-for="project in projects" 
-            :project="project" 
-            :projectScreenshotUrl="getScreenshotUrl(project)" 
-            class="w-1/3"
-            />
-        </div>
+  <div id="projects" class="">
+    <h1 class="text-center text-2xl font-bold">Projects</h1>
+    <div
+      id="projects-container"
+      class="w-1/2 m-auto flex flex-wrap justify-center"
+    >
+      <ProjectCard
+        v-for="project in projects"
+        :project="project"
+        :projectScreenshotUrl="getScreenshotUrl(project)"
+        class="w-1/3"
+      />
     </div>
+  </div>
 </template>
