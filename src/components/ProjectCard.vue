@@ -18,8 +18,10 @@ const props = defineProps({
         <a :href="props.project.repo_url">Github-Repo</a>
       </p>
       <ul>
-        <li v-for="tag in props.project.expand.tags" 
-        class="inline-block mr-1 my-1 bg-gray-800 px-2 rounded-md">
+        <li
+          v-for="tag in props.project.expand.tags"
+          class="inline-block mr-1 my-1 bg-gray-800 px-2 rounded-md"
+        >
           {{ tag.name }}
         </li>
       </ul>

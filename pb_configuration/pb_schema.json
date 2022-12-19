@@ -144,7 +144,7 @@
     "schema": [
       {
         "id": "bogdwehd",
-        "name": "tag_name",
+        "name": "name",
         "type": "text",
         "system": false,
         "required": true,
@@ -156,8 +156,8 @@
         }
       }
     ],
-    "listRule": null,
-    "viewRule": null,
+    "listRule": "",
+    "viewRule": "",
     "createRule": null,
     "updateRule": null,
     "deleteRule": null,
