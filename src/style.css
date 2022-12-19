@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
   .primary-button {
-    @apply transition ease-in-out delay-75 bg-teal-400 text-secondary font-bold px-4 mx-7 rounded-full shadow-button-backglow hover:shadow-primary block
+    @apply transition ease-in-out delay-75 bg-teal-400 text-secondary font-bold px-4 mx-7 rounded-full shadow-button-backglow hover:shadow-primary block;
   }
 
   .primary-input {
-    @apply my-2 bg-transparent rounded-xl border-solid border-primary border-2 p-2 focus:outline-none
+    @apply my-2 bg-transparent rounded-xl border-solid border-primary border-2 p-2 focus:outline-none;
   }
 }
 
@@ -29,5 +29,3 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
-
