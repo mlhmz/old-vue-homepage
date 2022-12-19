@@ -6,7 +6,11 @@ const $pb = inject("pb");
 const projects = ref([]);
 
 const getProjects = async () => {
-  const result = await $pb.collection("homepage_projects").getFullList();
+  const result = await $pb.collection("homepage_projects").getFullList(200, 
+    {
+      expand: 'tags',
+    }
+  );
   if (result) {
     projects.value = result;
   }
