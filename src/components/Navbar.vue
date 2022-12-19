@@ -37,7 +37,7 @@ const nav = reactive({
                         <RouterLink to="/server" id="mobile-nav" class="transition ease-in-out delay-50 font-bold hover:text-primary m-1 p-2 rounded-md block">Server</RouterLink>
                     </li>
                     <div id="btn-container" class="grid place-items-end">
-                        <button class="primary-button" @click="$emit('toggle-contact')">Contact</button>
+                        <button class="primary-button" v-on:click="toggleNav()" @click="$emit('toggle-contact')">Contact</button>
                     </div>
                 </ul>
             </div>
