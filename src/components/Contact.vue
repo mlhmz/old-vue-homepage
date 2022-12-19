@@ -32,7 +32,7 @@ const createContactMessage = async () => {
 </script>
 
 <template>
-    <div v-show="props.contactOpen" id="popup" class="fixed w-11/12 md:w-3/4 lg:w-2/6 xl:w-3/12 bg-secondary border-solid
+    <div v-show="props.contactOpen" id="popup" class="fixed w-11/12 md:w-2/4 lg:w-2/6 2xl:w-3/12 bg-secondary border-solid
     border-primary border-2 rounded-3xl inset-x-0 mx-auto backdrop-blur-lg bg-opacity-95 text-center p-5">
         <div id="close-btn-container" class="grid place-items-end">
             <font-awesome-icon class="text-2xl align-right cursor-pointer" @click="$emit('toggle-contact')"
