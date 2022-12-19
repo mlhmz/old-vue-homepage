@@ -30,12 +30,6 @@ const nav = reactive({
                     <li class="w-screen my-4">
                         <RouterLink to="/projects" id="mobile-nav" class="transition ease-in-out delay-50 font-bold hover:text-primary m-1 p-2 rounded-md block">Projects</RouterLink>
                     </li>
-                    <li class="w-screen my-4">
-                        <RouterLink to="/links" id="mobile-nav" class="transition ease-in-out delay-50 font-bold hover:text-primary m-1 p-2 rounded-md block">Links</RouterLink>
-                    </li>
-                    <li class="w-screen my-4">
-                        <RouterLink to="/server" id="mobile-nav" class="transition ease-in-out delay-50 font-bold hover:text-primary m-1 p-2 rounded-md block">Server</RouterLink>
-                    </li>
                     <div id="btn-container" class="grid place-items-end">
                         <button class="primary-button" v-on:click="toggleNav()" @click="$emit('toggle-contact')">Contact</button>
                     </div>
@@ -48,12 +42,6 @@ const nav = reactive({
                     </li>
                     <li class="mx-5">
                         <RouterLink to="/projects" class="transition ease-in-out delay-50 font-bold hover:text-primary">Projects</RouterLink>
-                    </li>
-                    <li class="mx-5">
-                        <RouterLink to="/links" class="transition ease-in-out delay-50 font-bold hover:text-primary">Links</RouterLink>
-                    </li>
-                    <li class="mx-5">
-                        <RouterLink to="/server" class="transition ease-in-out delay-50 font-bold hover:text-primary">Server</RouterLink>
                     </li>
                 </ul>
             </div>
