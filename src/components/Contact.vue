@@ -45,7 +45,7 @@ const createContactMessage = async () => {
       />
     </div>
     <h1 class="text-xl font-bold m-5">Contact</h1>
-    <form class="m-auto">
+    <div id="form" class="m-auto">
       <h2 class="font-semibold">Form</h2>
       <input
         class="primary-input w-full"
@@ -69,7 +69,7 @@ const createContactMessage = async () => {
       >
         Send
       </button>
-    </form>
+    </div>
     <h2 class="font-semibold my-3">Other contact options</h2>
     <ul>
       <li>
