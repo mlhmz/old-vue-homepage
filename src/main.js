@@ -32,6 +32,8 @@ library.add(faXmark);
 // Branded Icons
 library.add(faGithub, faInstagram, faTwitter, faLinkedin, faXing, faVuejs);
 
+const profilePictureUrl = import.meta.env.VITE_PROFILE_PICTURE_URL;
+
 createApp(App)
   .use(router)
   .component("FontAwesomeIcon", FontAwesomeIcon)
@@ -40,4 +42,5 @@ createApp(App)
   .component("Footer", Footer)
   .component("ProjectCard", ProjectCard)
   .provide("pb", pb)
+  .provide("pfpUrl", profilePictureUrl)
   .mount("#app");

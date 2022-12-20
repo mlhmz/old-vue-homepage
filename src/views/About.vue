@@ -2,6 +2,9 @@
 import { AgeFromDateString } from "age-calculator";
 import VTypical from "vue-typical";
 import { reactive } from "@vue/reactivity";
+import { inject } from "vue";
+
+const $pfpUrl = inject("pfpUrl"); 
 
 const age = new AgeFromDateString("2003-07-20").age;
 const personalTraits = reactive({
@@ -22,9 +25,10 @@ function switchToHobbies() {
 <template>
   <div id="about" class="w-1/2 m-auto">
     <h1 class="text-center text-2xl font-bold">About me</h1>
-    <div
+    <img
       id="profile-picture"
-      class="bg-white w-40 h-40 rounded-xl m-auto my-10 object-cover"
+      :src="$pfpUrl"
+      class="w-40 h-40 rounded-xl m-auto my-10 object-cover"
     />
     <div id="text-content" class="text-center my-5">
       <div id="introduction">
