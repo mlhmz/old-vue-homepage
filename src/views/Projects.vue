@@ -26,13 +26,13 @@ getProjects();
     <h1 class="text-center text-2xl font-bold">Projects</h1>
     <div
       id="projects-container"
-      class="w-1/2 m-auto flex flex-wrap justify-center"
+      class="w-full md:w-14/16 lg:w-5/6 m-auto flex flex-wrap justify-center"
     >
       <ProjectCard
         v-for="project in projects"
         :project="project"
         :projectScreenshotUrl="getScreenshotUrl(project)"
-        class="w-1/3"
+        class="xs:w-full s:w-1/3 md:w-1/2 lg:w-1/3"
       />
     </div>
   </div>
