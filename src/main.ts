@@ -2,26 +2,26 @@ import { createApp } from "vue";
 import "./style.css";
 
 import App from "./App.vue";
-import router from "./router";
-import Navbar from "./components/Navbar.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
+import Navbar from "./components/Navbar.vue";
 import ProjectCard from "./components/ProjectCard.vue";
+import router from "./router";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import {
   faGithub,
   faInstagram,
-  faTwitter,
   faLinkedin,
-  faXing,
+  faTwitter,
   faVuejs,
+  faXing,
 } from "@fortawesome/free-brands-svg-icons";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-import pb from "./pocketbase/index";
+import pb, { $pb } from "./pocketbase";
 
 // Regular Icons
 library.add(faHeart);
@@ -41,6 +41,6 @@ createApp(App)
   .component("Contact", Contact)
   .component("Footer", Footer)
   .component("ProjectCard", ProjectCard)
-  .provide("pb", pb)
+  .provide($pb, pb)
   .provide("pfpUrl", profilePictureUrl)
   .mount("#app");

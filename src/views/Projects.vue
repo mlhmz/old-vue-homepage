@@ -1,21 +1,22 @@
-<script setup>
+<script setup lang="ts">
 import { inject, ref } from "vue";
+import { $pb } from "../pocketbase";
 
-const $pb = inject("pb");
+const pb = inject($pb);
 
-const projects = ref([]);
+const projects = ref([] as Project[]);
 
 const getProjects = async () => {
-  const result = await $pb.collection("homepage_projects").getFullList(200, {
+  const result = await pb?.collection("homepage_projects").getFullList(200, {
     expand: "tags",
   });
   if (result) {
-    projects.value = result;
+    projects.value = result as Project[];
   }
 };
 
-const getScreenshotUrl = (project) => {
-  return $pb.getFileUrl(project, project.screenshot, { thumb: "800x600" });
+const getScreenshotUrl = (project: Project) => {
+  return pb?.getFileUrl(project, project.screenshot, { thumb: "800x600" });
 };
 
 getProjects();

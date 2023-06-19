@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { reactive } from "vue";
 
 const viewLSKey = new Date().toDateString() + " Views";
@@ -17,10 +17,14 @@ const increaseLSViewCount = () => {
   } else {
     localStorage.setItem(
       viewLSKey,
-      parseInt(localStorage.getItem(viewLSKey)) + 1
+      getAndIncreaseViewFromLS().toString()
     );
   }
 };
+
+const getAndIncreaseViewFromLS = (): number => {
+  return Number.parseInt(localStorage.getItem(viewLSKey) ?? "0") + 1;
+}
 
 const getViewCountFromLSAndIncrease = () => {
   increaseLSViewCount();

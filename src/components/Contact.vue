@@ -1,13 +1,12 @@
-<script setup>
+<script setup lang="ts">
 import { inject } from "vue";
-
-const emits = defineEmits(["toggle-contact"]);
+import { $pb } from "../pocketbase";
 
 const props = defineProps({
   contactOpen: Boolean,
 });
 
-const $pb = inject("pb");
+const pb = inject($pb);
 
 const contactMessage = {
   name: "",
@@ -22,7 +21,7 @@ const clearInput = () => {
 };
 
 const createContactMessage = async () => {
-  await $pb.collection("homepage_messages").create({
+  await pb?.collection("homepage_messages").create({
     name: contactMessage.name,
     email: contactMessage.email,
     content: contactMessage.content,
